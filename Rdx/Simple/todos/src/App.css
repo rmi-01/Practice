@@ -1,7 +1,12 @@
 div h1{
   text-align: center;
 }
-
+li{
+  width: 90vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 ul li{
   list-style: none;
 }

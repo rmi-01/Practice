@@ -20,7 +20,7 @@ function App() {
   const addTask = () => {
     dispatch(action.addTask({
       task,
-      id: list.length
+      id: list.length ? list[list.length - 1].id + 1 : 0
     }))
     document.querySelector('input').focus();
     setTask("");
@@ -32,11 +32,19 @@ function App() {
     }));
   }
 
+  const removeTask = (id) => {
+    dispatch(action.removeTask({
+      id
+    }))
+  }
+
   return (
     <div>
       <h1>Todo List</h1>
-      <input onChange={e => setTask(e.target.value)} value={task} />
-      <button onClick={addTask}>Add</button>
+      <div id="input">
+        <input onChange={e => setTask(e.target.value)} value={task} />
+        <button onClick={addTask}>Add</button>
+      </div>
       {
         list.length
           ?
@@ -46,7 +54,10 @@ function App() {
               list.map(entry => {
               return (
                 <li key={entry.id}>
-                  <p onClick={() => cancelTask(entry.id)}>{entry.task}</p>
+                  <p onClick={() => cancelTask(entry.id)} className={entry.isToggled && 'lineThrough'}>{entry.task}</p>
+                  <span class="material-icons" onClick={() => removeTask(entry.id)}>
+                    delete_outline
+                  </span>
                 </li>
               )
             })

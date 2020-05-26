@@ -17,24 +17,13 @@ export default function todoReducer(state = initialState, action) {
     case 'REMOVE_TASK':
       return {
         ...newState,
-        task: newState.task.filter(val => val.id !== action.payload.id)
+        task: newState.task.filter(entry => entry.id !== action.payload.id)
       }
     case 'CANCEL_TASK':
       // console.log(newState.task[action.payload.id])
       return {
         ...newState,
         task: newState.task.map((entry, i) => i === action.payload.id ? { ...entry, isToggled: !newState.task[action.payload.id].isToggled } : { ...entry })
-
-        // task: [
-        //   ...newState.task,
-        //   {
-        //     ...newState.task[action.payload.id],
-        //     isToggled: !newState.task[action.payload.id].isToggled
-        //     newState.task[action.payload.id].isToggled = !newState.task[action.payload.id].isToggled
-        //   }
-
-        // ]
-
       }
     default:
       return newState;
