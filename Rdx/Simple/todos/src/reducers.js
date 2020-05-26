@@ -23,7 +23,7 @@ export default function todoReducer(state = initialState, action) {
       // console.log(newState.task[action.payload.id])
       return {
         ...newState,
-        task: newState.task.map((entry, i) => i === action.payload.id ? { ...entry, isToggled: !newState.task[action.payload.id].isToggled } : { ...entry })
+        task: newState.task.map((entry) => entry.id === action.payload.id ? { ...entry, isToggled: !entry.isToggled } : { ...entry })
       }
     default:
       return newState;
