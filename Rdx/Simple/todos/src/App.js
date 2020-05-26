@@ -29,6 +29,12 @@ function App() {
     
   }
 
+  const keyHandler = (e) => {
+    if(e.key === 'Enter'){
+      addTask();
+    }
+  }
+
   const cancelTask = (id) => {
     dispatch(action.cancelTask({
       id
@@ -45,7 +51,7 @@ function App() {
     <div>
       <h1>Todo List</h1>
       <div id="input">
-        <input onChange={e => setTask(e.target.value)} value={task} />
+        <input onChange={e => setTask(e.target.value)} value={task} onKeyPress={(e) => keyHandler(e)}/>
         <button onClick={addTask}>Add</button>
       </div>
       {

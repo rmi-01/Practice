@@ -45,6 +45,9 @@ li{
   align-items: center;
   justify-content: space-between;
 }
+li p, li span{
+  cursor: pointer;
+}
 .noTasks{
   text-align: center;
 }
