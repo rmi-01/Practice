@@ -18,12 +18,15 @@ function App() {
   }, [list])
 
   const addTask = () => {
-    dispatch(action.addTask({
-      task,
-      id: list.length ? list[list.length - 1].id + 1 : 0
-    }))
-    document.querySelector('input').focus();
-    setTask("");
+    if(task.length > 0){
+      dispatch(action.addTask({
+        task,
+        id: list.length ? list[list.length - 1].id + 1 : 0
+      }))
+      document.querySelector('input').focus();
+      setTask("");
+    }
+    
   }
 
   const cancelTask = (id) => {
@@ -66,7 +69,7 @@ function App() {
           )
           :
           (
-            <p>You don't have any tasks</p>
+            <p className="noTasks">You don't have any tasks</p>
           )
       }
     </div>
