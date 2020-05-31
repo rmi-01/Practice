@@ -7,7 +7,7 @@ import Toolkit from './Toolkit';
 
 function App() {
   return (
-    <Simple />
+    <Toolkit />
   );
 }
 

@@ -6,12 +6,20 @@ import * as serviceWorker from './serviceWorker';
 import { createStore } from 'redux';
 import { Provider } from "react-redux";
 import todoReducer from './reducers';
+import { configureStore } from '@reduxjs/toolkit';
+import toolkitReducer from './toolkitSlice';
 
-const store = createStore(todoReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+// const store = createStore(todoReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+const toolkitStore = configureStore({
+  reducer: {
+    task: toolkitReducer
+  }
+})
 
 ReactDOM.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider store={toolkitStore}>
       <App />
     </Provider>
   </React.StrictMode>,
