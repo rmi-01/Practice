@@ -1,6 +1,6 @@
 import React from 'react';
-import ReduxTodos from './Redux/ReduxTodos';
-import ReactTodos from './React/ReactTodos'
+import ReduxTodos from './ReduxTodos/ReduxTodos';
+import ReactTodos from './ReactTodos/ReactTodos'
 
 function App() {
   return (
