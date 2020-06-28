@@ -60,7 +60,8 @@ class App extends React.Component {
 
 	render() {
 		return (
-			<div className="whole white shadow-5">
+			<div className="react-todos">
+				<div className="whole" />
 				<center>
 					<p className="pointer dim heading
 		    		pa1 b">
