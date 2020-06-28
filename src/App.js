@@ -5,7 +5,7 @@ import ReactTodos from './ReactTodos/ReactTodos'
 function App() {
   return (
     <div>
-      <ReactTodos />
+      <ReduxTodos />
     </div>
   );
 }

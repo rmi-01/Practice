@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import '../App.scss';
 import Simple from './Simple';
 import Toolkit from './Toolkit';
 import { Provider } from "react-redux";

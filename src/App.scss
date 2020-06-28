@@ -1,0 +1,74 @@
+/* body{
+	
+} */
+.react-todos{
+	.whole{
+		background: url("https://wallpaperaccess.com/full/1450250.jpg") no-repeat center center fixed;
+		background-size: cover;
+		position: fixed;
+		z-index: -5;
+		width: 100%;
+		height: 100vh;
+	}
+	.react-head{
+		cursor: pointer;
+		font-size: 90px;
+		width: 80%;
+		padding: 0px;
+		margin: 0px;
+		color: wheat;
+		font-weight: bold;
+	}
+	.division{
+		width: 390px;
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+
+		input{
+			width: 70%;
+		}
+		button{
+			width: 30%;
+			cursor: pointer;
+		}
+
+
+		input,button{
+			border-radius: 50px;
+			padding: 15px;
+			// margin: 15px;
+		}
+	}
+	.division1{
+		width: 390px;
+		display: flex;
+		// justify-content: space-between;
+		flex-direction: column;
+		list-style-type: none;
+		// margin: 0;
+		padding: 0;
+
+		li{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			// margin: 10px auto;
+			margin-top: 10px;
+
+			.line_through{
+				text-decoration: line-through;
+			}
+
+			p{
+				cursor: pointer;
+				color: white;
+			}
+			button{
+				border-radius: 15px;
+				padding: 5px 10px;
+				cursor: pointer;
+			}
+		}
+	}
+}

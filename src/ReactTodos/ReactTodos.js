@@ -1,5 +1,5 @@
 import React from 'react';
-import '../App.css';
+import '../App.scss';
 
 class App extends React.Component {
 
@@ -63,26 +63,22 @@ class App extends React.Component {
 			<div className="react-todos">
 				<div className="whole" />
 				<center>
-					<p className="pointer dim heading
-		    		pa1 b">
+					<p className="react-head">
 						To-Do List
 		    		</p>
-					<div className="flex justify-between ma4 division">
+					<div className="division">
 						<input
 							type="text"
-							className="w-70 input"
 							onChange={this.onInputChange}
 							onKeyPress={this.handleKeyPress}
 							placeholder="Add task"
 							value={this.state.input} />
 						<button
-							className="pointer dim 
-						w-30 button"
 							onClick={this.onAddClick}>
 							Add
 			    		</button>
 					</div>
-					<div className="division">
+					<ul className="division1">
 						{
 							this.state.tasks.map((data, index) => {
 								return (
@@ -96,7 +92,7 @@ class App extends React.Component {
 								);
 							})
 						}
-					</div>
+					</ul>
 				</center>
 			</div>
 		);
