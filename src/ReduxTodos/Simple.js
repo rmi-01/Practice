@@ -47,7 +47,7 @@ function Simple() {
   }
 
   return (
-    <div>
+    <div className="redux-todos">
       <h1>Todo List</h1>
       <div id="input">
         <input onChange={e => setTask(e.target.value)} value={task} onKeyPress={(e) => keyHandler(e)}/>

@@ -26,7 +26,8 @@
 		flex-direction: row;
 
 		input{
-			width: 70%;
+			width: 65%;
+			margin-right: 5px;
 		}
 		button{
 			width: 30%;
@@ -70,5 +71,84 @@
 				cursor: pointer;
 			}
 		}
+	}
+}
+
+.redux-todos{
+	// background-color: red;
+	// margin: 0;
+	// padding: 0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	margin-top: 19px;
+	margin-bottom: 19px;
+	h1{
+		font-size: 70px;
+		text-align: center;
+		// color: wheat;
+	}
+	#input{
+		margin-top: 15px;
+		// width: 50%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		input{
+			width: 199px;
+			margin-right: 5px;
+		}
+		button{
+			width: 80px;
+			cursor: pointer;
+		}
+
+
+		input,button{
+			border-radius: 50px;
+			padding: 15px;
+		}
+	}
+	ul{
+		// width: 390px;
+		display: flex;
+		// justify-content: space-between;
+		flex-direction: column;
+		list-style-type: none;
+		align-items: center;
+		// justify-content: center;
+		// margin: 0;
+		padding: 0;
+
+		li{
+			// background-color: blue;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 19px;
+
+			.line_through{
+				text-decoration: line-through;
+			}
+
+			p{
+				cursor: pointer;
+				color: black;
+				width: 300px;
+				text-align: left;
+				margin-right: 10px;
+				margin-top: 0;
+			}
+			span{
+				cursor: pointer;
+			}
+		}
+	}
+
+	p{
+		margin-top: 19px;
+		text-align: center;
+		color: red;
 	}
 }

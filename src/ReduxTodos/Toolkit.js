@@ -12,7 +12,7 @@ export default function Toolkit() {
     document.querySelector('input').focus();
     console.log(list);
     console.log(task);
-  }, [])
+  }, [list])
 
   useEffect(() => {
     console.log(list)
@@ -49,7 +49,7 @@ export default function Toolkit() {
   }
 
   return (
-    <div>
+    <div className="redux-todos">
       <h1>Todo List</h1>
       <div id="input">
         <input onChange={e => setTask(e.target.value)} value={task} onKeyPress={(e) => keyHandler(e)}/>
@@ -64,7 +64,7 @@ export default function Toolkit() {
               list.map(entry => {
               return (
                 <li key={entry.id}>
-                  <p onClick={() => cancelTask(entry.id)} className={entry.isToggled && 'lineThrough'}>{entry.task}</p>
+                  <p onClick={() => cancelTask(entry.id)} className={entry.isToggled && 'line_through'}>{entry.task}</p>
                   <span class="material-icons" onClick={() => removeTask(entry.id)}>
                     delete_outline
                   </span>
