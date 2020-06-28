@@ -82,8 +82,3 @@ export default function Toolkit() {
     </div>
   );
 }
-
-// export {Simple as Simple};
-// export deafult Simple;
-// const reducerrr = task.reducers;
-// export { reducerrr as toolkitReducer }
